@@ -1,9 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:300,500,600,700");
 
 body {
-  background: -webkit-radial-gradient(rgba(128,128,128,0.5),rgba(0,0,0,0.5));
-  /* background-color: #24B3A0; */
-  background-color: #00868c;
   display: table-cell;
   text-align: center;
   vertical-align: middle;
@@ -12,10 +9,36 @@ body {
   width: 100vw;
   height: 100vh;
   font-family: 'Montserrat', sans-serif;
-  color: #E4E4E4;
   font-weight: 300;
   font-size: 16px;
 }
+
+body.theme-default {
+  background: -webkit-radial-gradient(rgba(150,150,150,0.5),rgba(75,75,75,0.5));
+  background: #FFFFFF;
+  color: #222222;
+}
+
+body.theme-teal {
+  background: -webkit-radial-gradient(rgba(24,150,150,0.5),rgba(25,75,75,0.5));
+  background-color: #00868c;
+  color: #FEFEFE;
+}
+
+body.theme-image {
+  background: -webkit-radial-gradient(rgba(24,150,150,0.5),rgba(25,75,75,0.5));
+  background-image: url('../images/jpg/preloader.jpg');
+  background-size: cover;
+  color: #FEFEFE;
+}
+
+body.theme-brown {
+  background: -webkit-radial-gradient(rgba(132,65,25,0.5),rgba(61,35,20,0.5));
+  /* background: #543210; */
+  background-color: #3D2314;
+  color: #FEFEFE;
+}
+
 
 .container {
   top: 20vh;
@@ -29,18 +52,55 @@ h1 {
     letter-spacing: -2px;
 }
 
-h1 span {
+h1 span.theme-teal {
   color: #04d2dc;
 }
 
-.avatar {
-  border-radius: 50%;
-  width: 128px;
-  border: 3px solid #04d2dc;
+h1 span.theme-default {
+  color: #00914b;
 }
 
-.avatarIcon {
-  animation: grayscaleAvatar 2s infinite;
+h1 span.theme-image {
+  color: #35e4ff;
+}
+
+h1 span.theme-brown {
+  color: #ffff87;
+}
+
+
+#avatar {
+  border-radius: 50%;
+  width: 128px;
+  /* margin: -25px;
+  width: 178px;
+  height:
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg); */
+}
+
+/* .diamond {
+  width: 128px;
+  height: 128px;
+  margin: 25px;
+  -ms-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  overflow: hidden;
+} */
+
+
+img.theme-default {
+  border: 5px solid #00914b;
+}
+
+img.theme-teal {
+  border: 5px solid #00EEEE;
+}
+
+#avatar {
+  animation: grayscaleAvatar 5s infinite;
 }
 
 @keyframes grayscaleAvatar {
@@ -48,7 +108,7 @@ h1 span {
     filter: grayscale(0);
   }
   50% {
-    filter: grayscale(70%);
+    filter: grayscale(60%);
   }
   100% {
     filter: grayscale(0);
@@ -83,4 +143,94 @@ h1 span {
 #github:hover {
   filter: invert(100%) blur(0);
   transition: 1s all;
+}
+
+/*************************************************
+              THEMES BUTTONS
+*************************************************/
+ul {
+  text-decoration: none;
+  list-style-type: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  padding: 0 0 10px 0;
+}
+
+ul li {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+li.theme-buttons {
+  border-radius: 12px;
+  width: 24px;
+  height: 24px;
+}
+
+li.theme-default {
+  background: #FFFFFF;
+  filter: grayscale(100) blur(2px);
+  transition: 500ms all;
+}
+
+li.theme-default:hover {
+  background: #FFFFFF;
+  filter: grayscale(0) blur(0);
+  transition: 500ms all;
+  cursor: pointer;
+}
+
+/*        teal         */
+li.theme-teal {
+  background: #00EEEE;
+  filter: grayscale(100) blur(2px);
+  transition: 500ms all;
+}
+
+li.theme-teal:hover {
+  filter: grayscale(0) blur(0);
+  transition: 500ms all;
+  cursor: pointer;
+}
+
+/* BROWN  */
+li.theme-brown {
+  background: #654321;
+  filter: grayscale(100) blur(2px);
+  transition: 500ms all;
+}
+
+li.theme-brown:hover {
+  background: #654321;
+  filter: grayscale(0) blur(0);
+  transition: 500ms all;
+  cursor: pointer;
+}
+
+/* THEME-IMAGE  */
+li.theme-image {
+  background: url('../images/jpg/preloader.jpg');
+  filter: grayscale(100) blur(2px);
+  transition: 500ms all;
+}
+
+li.theme-image:hover {
+  filter: grayscale(0) blur(0);
+  transition: 500ms all;
+  cursor: pointer;
+}
+
+body {
+  animation: bodyBlur 2.5s;
+}
+
+@keyframes bodyBlur {
+  0% {
+    filter: blur(5px);
+  }
+  100% {
+    filter: blur(0);
+  }
 }

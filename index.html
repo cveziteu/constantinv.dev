@@ -8,12 +8,14 @@
     <link rel="icon" type="images/png" href="favicon-16x16.png" sizes="16x16" />
     <link rel="icon" href="favicon.ico">
   </head>
-  <body>
+  <body class="theme-image">
     <div class="container">
       <!-- <img src="images/png/avatar_chromatic.png" /> -->
-      <img src="images/png/avatar_vintage4.png" class="avatar avatarIcon" id="avatar" />
+      <div class="diamond">
+        <img src="images/png/avatar_vintage4.png" class="theme-image" id="avatar" />
+      </div>
       <h1>
-        constantinv<span>.dev</span>
+        constantinv<span class="theme-image">.dev</span>
       </h1>
       <p>
         I enjoy learning new things, design and programming in general.
@@ -28,6 +30,12 @@
       <a href="#" ><img src="images/png/icon_twitter1.png" class="socialIcons" id="twitter" alt="Twitter" /></a>
       <br/>
       <a href="https://github.com/cveziteu" target="_blank"><img src="images/png/icon_github.png" class="github "id="github" alt="Github" /></a>
+      <ul>
+        <li class="theme-buttons theme-default" onclick="myChangeThemeFunction(this.id)" id="themeDefault"></li>
+        <li class="theme-buttons theme-teal" onclick="myChangeThemeFunction(this.id)" id="themeTeal"></li>
+        <li class="theme-buttons theme-brown" onclick="myChangeThemeFunction(this.id)" id="themeBrown"></li>
+        <li class="theme-buttons theme-image" onclick="myChangeThemeFunction(this.id)" id="themeImage"></li>
+      </ul>
     </div>
   </body>
   <script src="js/script.js"></script>
