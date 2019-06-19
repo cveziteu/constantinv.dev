@@ -234,3 +234,9 @@ body {
     filter: blur(0);
   }
 }
+
+/* SOCIAL SECTION */
+
+section.socialSection {
+  padding: 50px 0 0 0;
+}

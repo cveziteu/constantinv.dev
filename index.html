@@ -10,32 +10,43 @@
   </head>
   <body class="theme-image">
     <div class="container">
-      <!-- <img src="images/png/avatar_chromatic.png" /> -->
-      <div class="diamond">
-        <img src="images/png/avatar_vintage4.png" class="theme-image" id="avatar" />
-      </div>
+      
+      <!-- Avatar Icon -->
+      <img src="images/png/avatar_vintage4.png" class="theme-image" id="avatar" />
+
+      <!-- Landing page domain name -->
       <h1>
         constantinv<span class="theme-image">.dev</span>
       </h1>
-      <p>
+
+      <!-- Short Bio -->
+      <article>
         I enjoy learning new things, design and programming in general.
         <br />No matter the language, I want to speak it! :)
-      </p>
-      <br />
-      <br />
-      <br />
-      <br />
-      <a href="#" ><img src="images/png/icon_instagram1.png" class="socialIcons" id="instagram" alt="Instagram" /></a>
-      <a href="#" ><img src="images/png/icon_linkedin1.png" class="socialIcons" id="linkedin" alt="LinkedIn" /></a>
-      <a href="#" ><img src="images/png/icon_twitter1.png" class="socialIcons" id="twitter" alt="Twitter" /></a>
-      <br/>
-      <a href="https://github.com/cveziteu" target="_blank"><img src="images/png/icon_github.png" class="github "id="github" alt="Github" /></a>
-      <ul>
-        <li class="theme-buttons theme-default" onclick="myChangeThemeFunction(this.id)" id="themeDefault"></li>
-        <li class="theme-buttons theme-teal" onclick="myChangeThemeFunction(this.id)" id="themeTeal"></li>
-        <li class="theme-buttons theme-brown" onclick="myChangeThemeFunction(this.id)" id="themeBrown"></li>
-        <li class="theme-buttons theme-image" onclick="myChangeThemeFunction(this.id)" id="themeImage"></li>
-      </ul>
+      </article>
+
+      <!-- Social Section -->
+      <section class="socialSection">
+        <a href="#" ><img src="images/png/icon_instagram1.png" class="socialIcons" id="instagram" alt="Instagram" /></a>
+        <a href="#" ><img src="images/png/icon_linkedin1.png" class="socialIcons" id="linkedin" alt="LinkedIn" /></a>
+        <a href="#" ><img src="images/png/icon_twitter1.png" class="socialIcons" id="twitter" alt="Twitter" /></a>
+        <a href="mailto:constantin.veziteu@outlook.com" ><img src="images/png/icon_outlook1.png" class="socialIcons" id="outlook" alt="Outlook" /></a>
+      </section>
+
+      <!-- Footer Section  -->
+      <footer>
+        <!-- Github button -->
+        <a href="https://github.com/cveziteu" target="_blank"><img src="images/png/icon_github.png" class="github "id="github" alt="Github" /></a>
+
+        <!-- Theme Select Menu -->
+        <ul>
+          <li class="theme-buttons theme-default" onclick="ChangeTheme(this.id)" id="themeDefault"></li>
+          <li class="theme-buttons theme-teal" onclick="ChangeTheme(this.id)" id="themeTeal"></li>
+          <li class="theme-buttons theme-brown" onclick="ChangeTheme(this.id)" id="themeBrown"></li>
+          <li class="theme-buttons theme-image" onclick="ChangeTheme(this.id)" id="themeImage"></li>
+        </ul>
+      </footer>
+
     </div>
   </body>
   <script src="js/script.js"></script>
