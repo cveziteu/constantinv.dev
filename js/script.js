@@ -14,44 +14,60 @@ var selectedTheme = "";
 
 
 // Check if the theme is already applied to all elements.
-function checkElementsTheme(selectedTheme) {
-  for (var i = 0; i < myElements.length; i++) {
-    if (!document.getElementsByTagName(myElements[i])[0].classList.contains(selectedTheme)) {
-      return false;
+const checkElementsTheme = (selectedTheme) => {
+    for (elementItem in myElements) {
+        if (!document.getElementsByTagName(myElements[elementItem])[0].classList.contains(selectedTheme)) {
+            return false;
+        }
     }
-  }
-  return true;
+  // for (var i = 0; i < myElements.length; i++) {
+  //   if (!document.getElementsByTagName(myElements[i])[0].classList.contains(selectedTheme)) {
+  //     return false;
+  //   }
+  // }
+    return true;
 }
 
 // Remove all "theme" classes from the elements.
-function removeClasses() {
-  for (var i = 0; i < myThemes.length; i++) {
-    for (var j = 0; j < myElements.length; j++) {
-      document.getElementsByTagName(myElements[j])[0].classList.remove(myThemes[i]);
+const removeClasses = () => {
+    for (themeItem in myThemes) {
+        for (elementItem in myElements) {
+            document.getElementsByTagName(myElements[elementItem])[0].classList.remove(myThemes[themeItem]);
+        }
     }
-  }
+  // for (var i = 0; i < myThemes.length; i++) {
+  //   for (var j = 0; j < myElements.length; j++) {
+  //     document.getElementsByTagName(myElements[j])[0].classList.remove(myThemes[i]);
+  //   }
+  // }
 }
 
 // Add the theme class to all elements.
-function addClasses(selectedTheme) {
-  for (var j = 0; j < myElements.length; j++) {
-    document.getElementsByTagName(myElements[j])[0].classList.add(selectedTheme);
-  }
+const addClasses = (selectedTheme) => {
+    for (elementItem in myElements) {
+        document.getElementsByTagName(myElements[elementItem])[0].classList.add(selectedTheme);
+    }
+  // for (var j = 0; j < myElements.length; j++) {
+  //   document.getElementsByTagName(myElements[j])[0].classList.add(selectedTheme);
+  // }
 }
 
 
 // Main function
-function ChangeTheme(clickedId) {
-
-  for (var i = 0; i < myThemes.length; i++) {
-    if (clickedId ==  myIds[i]) {
-      selectedTheme = myThemes[i];
+const changeTheme = (clickedId) => {
+    for (themeItem in myThemes) {
+        if (clickedId ===  myIds[themeItem]) {
+            selectedTheme = myThemes[themeItem];
+        }
     }
-  }
+  // for (var i = 0; i < myThemes.length; i++) {
+  //   if (clickedId ===  myIds[i]) {
+  //     selectedTheme = myThemes[i];
+  //   }
+  // }
 
-  if (!checkElementsTheme(selectedTheme)) {
-      console.log(selectedTheme + " - requested!");
-      removeClasses();
-      addClasses(selectedTheme);
-  }
+    if (!checkElementsTheme(selectedTheme)) {
+        removeClasses();
+        addClasses(selectedTheme);
+    }
 }
