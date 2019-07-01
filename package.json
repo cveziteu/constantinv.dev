@@ -1,0 +1,19 @@
+{
+  "name": "constantinv.dev",
+  "version": "1.0.0",
+  "description": "Personal landing page",
+  "main": "js/script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cveziteu/constantinv.dev.git"
+  },
+  "author": "Constantin Veziteu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cveziteu/constantinv.dev/issues"
+  },
+  "homepage": "https://github.com/cveziteu/constantinv.dev#readme"
+}
